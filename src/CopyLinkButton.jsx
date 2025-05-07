@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import { toast } from "react-toastify";
 import copy from "copy-to-clipboard";
 

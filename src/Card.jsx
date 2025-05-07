@@ -1,4 +1,3 @@
-import React from "react";
 import { useCustomScript } from "./Script";
 import logoImage from "./assets/cpm_logo_b.png";
 import recentProject from "./assets/code.png";
@@ -9,6 +8,7 @@ import twitter from "./assets/twitter.png";
 import instagram from "./assets/instagram.png";
 import randomdice from "./assets/random_dice.png";
 import CopyLinkButton from "./CopyLinkButton"; // Import the CopyLinkButton component
+import propTypes from "prop-types";
 
 const buttonsData = [
   {
@@ -66,6 +66,13 @@ const SocialButton = ({ link, icon, label, disabled }) => (
   </button>
 );
 
+SocialButton.propTypes = {
+  link: propTypes.string.isRequired,
+  icon: propTypes.string.isRequired,
+  label: propTypes.string.isRequired,
+  disabled: false,
+};
+
 function Card() {
   useCustomScript();
 
@@ -79,7 +86,7 @@ function Card() {
         />
         <h1 className="text-4xl font-bold">PandaMonkey</h1>
         <p className="mx-auto mt-2 items-center text-center text-base">
-          Hello! I'm Sam currently in my 4th Year in Computer Science
+          Hello! I&apos;m Sam currently in my 4th Year in Computer Science
         </p>
         <div className="my-2">
           <CopyLinkButton />
@@ -101,7 +108,7 @@ function Card() {
         <footer className="footer footer-center p-5 text-black">
           <aside>
             <p className="font-bold">CaptainPandaMonkey</p>
-            <p>Copyright © 2024 - All rights reserved</p>
+            <p>Made in 2024</p>
           </aside>
         </footer>
       </div>
