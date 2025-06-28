@@ -36,7 +36,7 @@ const buttonsData = [
     disabled: false,
   },
   {
-    link: "https://www.linkedin.com/in/lovely-cunanan-9aa1b130b/",
+    link: "https://www.linkedin.com/in/lovelycunanan/",
     icon: linkedin,
     label: "linkedin",
     disabled: false,
@@ -86,7 +86,9 @@ function Card() {
         />
         <h1 className="text-4xl font-bold">PandaMonkey</h1>
         <p className="mx-auto mt-2 items-center text-center text-base">
-          Hello! I&apos;m Sam currently in my 4th Year in Computer Science
+          Mathematics and Computer Science Graduate <br />
+          Junior Web Developer at Virtual Graffiti Australia <br />
+          Discord Moderator at The High Exchange - THX and The High X
         </p>
         <div className="my-2">
           <CopyLinkButton />
