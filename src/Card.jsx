@@ -12,15 +12,15 @@ import propTypes from "prop-types";
 
 const buttonsData = [
   {
-    link: "https://github.com/Lucianono/ShelterAlloc_Thesis",
+    link: "https://lovalog.infinityfreeapp.com/",
     icon: recentProject,
     label: "recent project",
     disabled: false,
   },
   {
-    link: "https://lovalog.infinityfreeapp.com/",
+    link: "https://captainpandamonkey5.github.io/randompicker/",
     icon: randomdice,
-    label: "store price ledger",
+    label: "randompicker website",
     disabled: false,
   },
   {
