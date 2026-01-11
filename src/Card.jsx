@@ -18,9 +18,9 @@ const buttonsData = [
     disabled: false,
   },
   {
-    link: "https://captainpandamonkey5.github.io/randompicker/",
+    link: "https://lovalog.infinityfreeapp.com/",
     icon: randomdice,
-    label: "randompicker website",
+    label: "store price ledger",
     disabled: false,
   },
   {
