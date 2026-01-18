@@ -7,8 +7,9 @@ import linkedin from "./assets/linkedin.png";
 import twitter from "./assets/twitter.png";
 import instagram from "./assets/instagram.png";
 import randomdice from "./assets/random_dice.png";
-import CopyLinkButton from "./CopyLinkButton"; // Import the CopyLinkButton component
+import CopyLinkButton from "./CopyLinkButton";
 import propTypes from "prop-types";
+import { Link } from "react-router-dom"; 
 
 const buttonsData = [
   {
@@ -24,10 +25,10 @@ const buttonsData = [
     disabled: false,
   },
   {
-    link: "https://captainpandamonkey5.github.io/CPM-Alpha/src/index.html",
+    link: "/about", 
     icon: user,
     label: "more about me",
-    disabled: true,
+    disabled: false, 
   },
   {
     link: "https://github.com/CaptainPandaMonkey5",
@@ -55,26 +56,42 @@ const buttonsData = [
   },
 ];
 
-const SocialButton = ({ link, icon, label, disabled }) => (
-  <button
-    className="btn btn-warning flex w-80 items-center justify-center rounded-2xl border-2 border-[#333333] text-lg font-bold shadow-[5px_10px_0px_0px_rgba(51,51,51,1)] transition duration-500 hover:bg-gray-500 hover:text-white hover:shadow-[0_0_0_0_rgba(0,0,0,0)]"
-    data-link={link}
-    disabled={disabled}
-  >
-    <img src={icon} alt={label} className="mr-2 h-6 w-6" />
-    <span className="text-center">{label}</span>
-  </button>
-);
+const SocialButton = ({ link, icon, label, disabled }) => {
+  const buttonClass = "btn btn-warning flex w-80 items-center justify-center rounded-2xl border-2 border-[#333333] text-lg font-bold shadow-[5px_10px_0px_0px_rgba(51,51,51,1)] transition duration-500 hover:bg-gray-500 hover:text-white hover:shadow-[0_0_0_0_rgba(0,0,0,0)]";
+  
+
+  if (link.startsWith("/")) {
+      return (
+        <Link to={link} className={buttonClass}>
+            <img src={icon} alt={label} className="mr-2 h-6 w-6" />
+            <span className="text-center">{label}</span>
+        </Link>
+      );
+  }
+
+
+  return (
+    <button
+      className={buttonClass}
+      onClick={() => !disabled && window.open(link, '_blank')}
+      disabled={disabled}
+    >
+      <img src={icon} alt={label} className="mr-2 h-6 w-6" />
+      <span className="text-center">{label}</span>
+    </button>
+  );
+};
 
 SocialButton.propTypes = {
   link: propTypes.string.isRequired,
   icon: propTypes.string.isRequired,
   label: propTypes.string.isRequired,
-  disabled: false,
+  disabled: propTypes.bool,
 };
 
 function Card() {
-  useCustomScript();
+
+  useCustomScript(); 
 
   return (
     <>
