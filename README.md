@@ -1,6 +1,6 @@
 # PandaMonkeyCard
 
-[![status: active](https://opensource.twitter.dev/status/active.svg)](https://captainpandamonkey5.github.io/PandaMonkeyCard/)
+[![status: experimental](https://opensource.twitter.dev/status/experimental.svg)](https://captainpandamonkey5.github.io/pandamonkeycard/)
 
 ## Description
 
