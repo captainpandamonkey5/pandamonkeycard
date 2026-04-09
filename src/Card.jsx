@@ -12,7 +12,7 @@ import propTypes from "prop-types";
 
 const buttonsData = [
   {
-    link: "https://lovalog.infinityfreeapp.com/",
+    link: "https://lovalog.free.nf/",
     icon: recentProject,
     label: "recent project",
     disabled: false,
@@ -87,8 +87,7 @@ function Card() {
         <h1 className="text-4xl font-bold">PandaMonkey</h1>
         <p className="mx-auto mt-2 items-center text-center text-base">
           Mathematics and Computer Science Graduate <br />
-          Junior Web Developer at Virtual Graffiti Australia <br />
-          Discord Moderator at The High Exchange - THX and The High X
+          Junior Web Developer at Virtual Graffiti Australia
         </p>
         <div className="my-2">
           <CopyLinkButton />
