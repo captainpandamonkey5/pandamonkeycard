@@ -27,7 +27,7 @@ const buttonsData = [
     link: "https://captainpandamonkey5.github.io/CPM-Alpha/src/index.html",
     icon: user,
     label: "more about me",
-    disabled: true,
+    disabled: false,
   },
   {
     link: "https://github.com/CaptainPandaMonkey5",
